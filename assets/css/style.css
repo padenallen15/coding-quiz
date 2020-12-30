@@ -6,6 +6,29 @@ header {
 
 .question-body {
     text-align: center;
-    size: 50%;
+    position: relative;
     margin: 30px;
+}
+
+#quiz-question {
+    display: none;
+}
+
+#the-result {
+    display: none;
+    border-top: 5px solid black;
+    width: 90vw;
+}
+
+.btn-wrapper {
+    width: 90vw;
+}
+
+.btnAnswer {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    display: block;
+    width: inherit;
+    font-size: large;
 }

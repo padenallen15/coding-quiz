@@ -13,20 +13,39 @@
                 <h3>High Scores</h3>
             </div>
             <div>
-                <h3 id="timer">Time: 60 Seconds</h3>
+                <h3 id="timer">Time: 60 Seconds Remaining</h3>
             </div>
         </header>
 
-        <section class="question-body">
-            <div class="question">
+        <section id="opening-statement" class="question-body">
+            <div>
                 <h1 id="title">Welcome to the Coding Quiz!</h1>
-                <p id="info">You will have 60 seconds to answer as many questions as possible. <br> For every incorrect answer selected you will be deducted 5 seconds from your remaining time. <br> Click the Get Started button below to begin the quiz. <br> Good Luck!</p>
+                <p id="info">You will have 30 seconds to answer 5 questions. <br> For each incorrect answer you will be deducted 5 seconds from your remaining time. <br> Click the Get Started button below to begin the quiz. <br> Good Luck!</p>
             </div>
             <div class="start-btn">
                 <button class="btn" id="start-quiz" type="submit">Get Started</button>
               </div>
             
         </section>
+
+        <section id="quiz-question"  class="question-body">
+            <div>
+                <h1 id="question"></h1>
+            </div>
+            <div class="btn-wrapper">
+                <button class="btnAnswer" id="answerA" type="submit">Answer Choice A</button>
+                <button class="btnAnswer" id="answerB" type="submit">Answer Choice B</button>
+                <button class="btnAnswer" id="answerC" type="submit">Answer Choice C</button>
+                <button class="btnAnswer" id="answerD" type="submit">Answer Choice D</button>
+            </div>
+        </section>
+
+        <section id="the-result" class="question-body">
+            <div class="result">
+                <h1 id="result"></h1>
+            </div>
+        </section>
+
         <script src="./assets/js/script.js"></script>
     </body>
 </html>
