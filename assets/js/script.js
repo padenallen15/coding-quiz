@@ -4,6 +4,8 @@ var tempTime = 0;
 var score = 0;
 var startBtn = document.getElementById('start-quiz');
 var openState = document.getElementById('opening-statement');
+var openTitle = document.getElementById('title');
+var openInfo = document.getElementById('info');
 var quizQuest = document.getElementById('quiz-question');
 var questTitle = document.getElementById('question');
 var answerA = document.getElementById('answerA');
@@ -37,20 +39,243 @@ function firstQuestion() {
         setTimeout(secondQuestion, 3000);
     });
 
+    answerB.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerB.style.color = 'red';
+        answerC.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'red';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(secondQuestion, 3000);
+    });
+
+    answerC.addEventListener("click", function() {
+        tempTime = timeLeft;
+        answerC.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'green';
+        result.textContent = 'Correct Answer!';
+        setTimeout(secondQuestion, 3000);
+    });
+
+    answerD.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerD.style.color = 'red';
+        answerC.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'red';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(secondQuestion, 3000);
+    });
 }
 
 function secondQuestion() {
     resetAnswers();
-    timeLeft = tempTime;
     resultSection.style.display = 'none';
+    timeLeft = tempTime;
     questTitle.textContent = 'This is the second question';
     answerA.textContent = 'Wrong';
     answerB.textContent = 'Wrong';
     answerC.textContent = 'Wrong';
     answerD.textContent = 'Right';
+
+    answerA.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerA.style.color = 'red';
+        answerD.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'red';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(thirdQuestion, 3000);
+    });
+
+    answerB.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerB.style.color = 'red';
+        answerD.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'red';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(thirdQuestion, 3000);
+    });
+
+    answerC.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerC.style.color = 'red';
+        answerD.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'red';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(thirdQuestion, 3000);
+    });
+
+    answerD.addEventListener("click", function() {
+        tempTime = timeLeft;
+        answerD.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'green';
+        result.textContent = 'Correct Answer!';
+        setTimeout(thirdQuestion, 3000);
+    });
 }
 
+function thirdQuestion() {
+    resetAnswers();
+    resultSection.style.display = 'none';
+    timeLeft = tempTime;
+    questTitle.textContent = 'This is the third question';
+    answerA.textContent = 'Wrong';
+    answerB.textContent = 'Wrong';
+    answerC.textContent = 'Wrong';
+    answerD.textContent = 'Right';
 
+    answerA.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerA.style.color = 'red';
+        answerD.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'red';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(fourthQuestion, 3000);
+    });
+
+    answerB.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerB.style.color = 'red';
+        answerD.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'red';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(fourthQuestion, 3000);
+    });
+
+    answerC.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerC.style.color = 'red';
+        answerD.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'red';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(fourthQuestion, 3000);
+    });
+
+    answerD.addEventListener("click", function() {
+        tempTime = timeLeft;
+        answerD.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'green';
+        result.textContent = 'Correct Answer!';
+        setTimeout(fourthQuestion, 3000);
+    });
+}
+
+function fourthQuestion() {
+    resetAnswers();
+    resultSection.style.display = 'none';
+    timeLeft = tempTime;
+    questTitle.textContent = 'This is the fourth question';
+    answerA.textContent = 'Right';
+    answerB.textContent = 'Wrong';
+    answerC.textContent = 'Wrong';
+    answerD.textContent = 'Wrong';
+
+    answerA.addEventListener("click", function() {
+        tempTime = timeLeft;
+        answerA.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'green';
+        result.textContent = 'Correct Answer!';
+        setTimeout(fifthQuestion, 3000);
+    });
+
+    answerB.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerB.style.color = 'red';
+        answerA.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'red';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(fifthQuestion, 3000);
+    });
+
+    answerC.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerC.style.color = 'red';
+        answerA.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'red';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(fifthQuestion, 3000);
+    });
+
+    answerD.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerD.style.color = 'red';
+        answerA.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'green';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(fifthQuestion, 3000);
+    });
+}
+
+function fifthQuestion() {
+    resetAnswers();
+    resultSection.style.display = 'none';
+    timeLeft = tempTime;
+    questTitle.textContent = 'This is the fifth question';
+    answerA.textContent = 'Wrong';
+    answerB.textContent = 'Wrong';
+    answerC.textContent = 'Wrong';
+    answerD.textContent = 'Right';
+
+    answerA.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerA.style.color = 'red';
+        answerD.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'red';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(endGame, 3000);
+    });
+
+    answerB.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerB.style.color = 'red';
+        answerD.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'red';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(endGame, 3000);
+    });
+
+    answerC.addEventListener("click", function() {
+        tempTime = timeLeft - 5;
+        answerC.style.color = 'red';
+        answerD.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'red';
+        result.textContent = 'Wrong Answer, Time -5 Seconds!';
+        setTimeout(endGame, 3000);
+    });
+
+    answerD.addEventListener("click", function() {
+        tempTime = timeLeft;
+        answerD.style.color = 'green';
+        resultSection.style.display = 'block';
+        resultSection.style.borderColor = 'green';
+        result.textContent = 'Correct Answer!';
+        setTimeout(endGame, 3000);
+    });
+}
+
+function endGame () {
+    resultSection.style.display = 'none';
+    quizQuest.style.display = 'none';
+    openState.style.display = 'block';
+    openTitle.textContent = 'Thank you for playing!'
+    openInfo.textContent = 'Your score was a ' + score + '/5';
+}
 
 
 // Timer that counts down from 60
