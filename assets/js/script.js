@@ -15,13 +15,6 @@ var answerD = document.getElementById('answerD');
 var resultSection = document.getElementById('the-result');
 var result = document.getElementById('result');
 
-function resetAnswers() {
-    answerA.style.color = 'black';
-    answerB.style.color = 'black';
-    answerC.style.color = 'black';
-    answerD.style.color = 'black';
-}
-
 function firstQuestion() {
     questTitle.textContent = 'This is the first question';
     answerA.textContent = 'Wrong';
@@ -31,8 +24,6 @@ function firstQuestion() {
 
     answerA.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerA.style.color = 'red';
-        answerC.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -41,8 +32,6 @@ function firstQuestion() {
 
     answerB.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerB.style.color = 'red';
-        answerC.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -51,17 +40,15 @@ function firstQuestion() {
 
     answerC.addEventListener("click", function() {
         tempTime = timeLeft;
-        answerC.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'green';
         result.textContent = 'Correct Answer!';
+        score = score + 1;
         setTimeout(secondQuestion, 3000);
     });
 
     answerD.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerD.style.color = 'red';
-        answerC.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -70,7 +57,6 @@ function firstQuestion() {
 }
 
 function secondQuestion() {
-    resetAnswers();
     resultSection.style.display = 'none';
     timeLeft = tempTime;
     questTitle.textContent = 'This is the second question';
@@ -81,8 +67,6 @@ function secondQuestion() {
 
     answerA.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerA.style.color = 'red';
-        answerD.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -91,8 +75,6 @@ function secondQuestion() {
 
     answerB.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerB.style.color = 'red';
-        answerD.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -101,8 +83,6 @@ function secondQuestion() {
 
     answerC.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerC.style.color = 'red';
-        answerD.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -111,16 +91,15 @@ function secondQuestion() {
 
     answerD.addEventListener("click", function() {
         tempTime = timeLeft;
-        answerD.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'green';
         result.textContent = 'Correct Answer!';
+        score = score + 1;
         setTimeout(thirdQuestion, 3000);
     });
 }
 
 function thirdQuestion() {
-    resetAnswers();
     resultSection.style.display = 'none';
     timeLeft = tempTime;
     questTitle.textContent = 'This is the third question';
@@ -131,8 +110,6 @@ function thirdQuestion() {
 
     answerA.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerA.style.color = 'red';
-        answerD.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -141,8 +118,6 @@ function thirdQuestion() {
 
     answerB.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerB.style.color = 'red';
-        answerD.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -151,8 +126,6 @@ function thirdQuestion() {
 
     answerC.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerC.style.color = 'red';
-        answerD.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -161,16 +134,15 @@ function thirdQuestion() {
 
     answerD.addEventListener("click", function() {
         tempTime = timeLeft;
-        answerD.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'green';
         result.textContent = 'Correct Answer!';
+        score = score + 1;
         setTimeout(fourthQuestion, 3000);
     });
 }
 
 function fourthQuestion() {
-    resetAnswers();
     resultSection.style.display = 'none';
     timeLeft = tempTime;
     questTitle.textContent = 'This is the fourth question';
@@ -181,17 +153,15 @@ function fourthQuestion() {
 
     answerA.addEventListener("click", function() {
         tempTime = timeLeft;
-        answerA.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'green';
         result.textContent = 'Correct Answer!';
+        score = score + 1;
         setTimeout(fifthQuestion, 3000);
     });
 
     answerB.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerB.style.color = 'red';
-        answerA.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -200,8 +170,6 @@ function fourthQuestion() {
 
     answerC.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerC.style.color = 'red';
-        answerA.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -210,8 +178,6 @@ function fourthQuestion() {
 
     answerD.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerD.style.color = 'red';
-        answerA.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'green';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -220,7 +186,6 @@ function fourthQuestion() {
 }
 
 function fifthQuestion() {
-    resetAnswers();
     resultSection.style.display = 'none';
     timeLeft = tempTime;
     questTitle.textContent = 'This is the fifth question';
@@ -231,8 +196,6 @@ function fifthQuestion() {
 
     answerA.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerA.style.color = 'red';
-        answerD.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -241,8 +204,6 @@ function fifthQuestion() {
 
     answerB.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerB.style.color = 'red';
-        answerD.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -251,8 +212,6 @@ function fifthQuestion() {
 
     answerC.addEventListener("click", function() {
         tempTime = timeLeft - 5;
-        answerC.style.color = 'red';
-        answerD.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'red';
         result.textContent = 'Wrong Answer, Time -5 Seconds!';
@@ -261,10 +220,10 @@ function fifthQuestion() {
 
     answerD.addEventListener("click", function() {
         tempTime = timeLeft;
-        answerD.style.color = 'green';
         resultSection.style.display = 'block';
         resultSection.style.borderColor = 'green';
         result.textContent = 'Correct Answer!';
+        score = score + 1;
         setTimeout(endGame, 3000);
     });
 }
@@ -302,6 +261,7 @@ function countdown() {
             timerEl.textContent = 'Time Has Expired!';
             // Use `clearInterval()` to stop the timer
             clearInterval(timeInterval);
+            endGame();
             // Call the `displayMessage()` function
             //displayMessage();
         }
