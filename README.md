@@ -12,7 +12,7 @@ A website that quizzes users.
 https://padenallen15.github.io/coding-quiz/
 
 ## Screenshot
-![Alt text](/assets/images/demo)
+![Alt text](./assets/images/demo.png)
 
 ## Contribution
 Made with ❤️ by [Paden Allen]
